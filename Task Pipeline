@@ -1,0 +1,5 @@
+# task pipeline
+extract >> transform >> load
+
+
+##IT IS THE SERIAL IN WHICH THE DAG WILL GIVE OUTPU##
