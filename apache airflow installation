@@ -1,0 +1,22 @@
+# Airflow needs a home. `~/airflow` is the default, but you can put it
+# somewhere else if you prefer (optional)
+export AIRFLOW_HOME=~/airflow
+
+
+# Install Airflow using the constraints file
+CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
+
+### TO GET AIRFLOW_VERSION, VISIT OFFICAIL DCUMENTATION###
+=AIRFLOW_VERSION=2.3.4 (CURRENT VERSION)
+### TO GET PYTHON VERSION SIMPLY INSTALL PYTHON3 AND EXECUTE FOLLOWING COMMAND ###
+PYTHON_VERSION="$(python --version | cut -d " " -f 2 | cut -d "." -f 1-2)"
+###DON'T WORRY ABOUT THE CUT COMMAND AND SUCCEEDING SYNTAX IT IS A LINUX COMMAND TO TO GET SPECIFIC WORDS FROM A LINE###
+
+
+# The Standalone command will initialise the database, make a user,
+# and start all components for you.
+airflow standalone
+(IT IS USED TO RUN AIRFLOW LOCALLY AND IT JUST FOR TRAINING PURPOSE IT SHOULD NOT BE USED IN DEVLOPMENT)
+(FOR DEVLOPMENT PURPOSE DOAIN IS REQUIRED)
+
+AFTER EXECUTING ABOVE COMMAND YOU WILL SEE AIRFLOW IS STARTED AND YOU HAVE TO VISIT YOUR CHROME BROWSER AND SEARCH FOR "localhost:8080" . HERE YOU CAN SEE THR LIST OF YOUR INBUILT DAG WHICH COMES WITH THE APACGE-AIRFLOW INSTALLATION.
