@@ -1,0 +1,14 @@
+A typical DAG Arguments block looks like this.
+
+#defining DAG arguments
+
+# You can override them on a per-task basis during operator initialization
+default_args = {
+    'owner': 'YOUR NAME',
+    'start_date': days_ago(0),  ###IT MEANS FROM TODAY###
+    'email': ['YOUR EMAIL-ID'],
+    'email_on_failure': True,
+    'email_on_retry': True,
+    'retries': 1,
+    'retry_delay': timedelta(minutes=5),  ###IT WOULD TRY THE SAME EVERY 5 MIN IF TASK FAISL###
+}
