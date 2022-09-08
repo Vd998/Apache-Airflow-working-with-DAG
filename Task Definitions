@@ -1,0 +1,26 @@
+A typical task definitions block looks like this:
+
+# define the tasks
+
+# define the first task named extract
+extract = BashOperator(
+    task_id='extract',
+    bash_command='echo "extract"',   ### IT IS THE COMMAND THAT WILL BE USED###
+    dag=dag,
+)
+
+
+# define the second task named transform
+transform = BashOperator(
+    task_id='transform',
+    bash_command='echo "transform"',
+    dag=dag,
+)
+
+# define the third task named load
+
+load = BashOperator(
+    task_id='load',
+    bash_command='echo "load"',
+    dag=dag,
+)
